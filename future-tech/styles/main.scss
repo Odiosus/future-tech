@@ -4,4 +4,8 @@
 @use 'utils';
 @use 'globals';
 
-
+@use 'blocks/header';
+@use 'blocks/burger-button';
+@use 'blocks/button';
+@use 'blocks/icon';
+@use 'blocks/logo';
