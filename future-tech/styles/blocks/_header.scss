@@ -24,4 +24,26 @@
             display: contents;
         }
     }
+
+    &__menu {
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: rem(16);
+        }
+
+        &-link {
+            padding: rem(14) rem(24);
+            color: var(--color-gray-50);
+
+            &.is-active {
+                color: var(--color-light);
+                font-weight: 500;
+                background-color: var(--color-dark);
+                border: var(--border);
+                border-radius: rem(10);
+                pointer-events: none;
+            }
+        }
+    }
 }

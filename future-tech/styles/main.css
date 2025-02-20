@@ -405,6 +405,23 @@ a[class] {
     display: contents;
   }
 }
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.header__menu-link {
+  padding: 0.875rem 1.5rem;
+  color: var(--color-gray-50);
+}
+.header__menu-link.is-active {
+  color: var(--color-light);
+  font-weight: 500;
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: 0.625rem;
+  pointer-events: none;
+}
 
 .icon {
   display: inline-flex;
@@ -423,6 +440,10 @@ a[class] {
 }
 .icon--yellow-arrow::after {
   background-image: url("../../icons/arrow-top-right_yellow.svg");
+}
+
+.logo {
+  max-width: clamp(7.875rem, 7.0306372549rem + 3.4640522876vw, 11.1875rem);
 }
 
 /*# sourceMappingURL=main.css.map */
