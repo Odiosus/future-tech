@@ -4,7 +4,24 @@
     &__promo {
         padding-block: rem(20);
         text-align: center;
-        border-bottom: rem(1) solid var(--border);
+        border-bottom: var(--border);
+    }
+
+    &__body {
+        padding-block: rem(24);
+        background-color: var(--color-dark-10);
+
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 1rem;
+        }
+    }
+
+    &__overlay {
+        @include mobile-above {
+            display: contents;
+        }
     }
 }
-
