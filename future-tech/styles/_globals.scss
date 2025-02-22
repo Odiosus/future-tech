@@ -1,5 +1,6 @@
 @use 'helpers' as *;
 
+// сброс стилей браузера и общие стили
 body {
     @include fluid-text(18, 24);
     
@@ -9,7 +10,7 @@ body {
     background-color: var(--color-dark);
 }
 
-
+// заголовки
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -60,6 +61,8 @@ h6, .h6 {
     @include fluid-text(20, 16);
 }
 
+
+// сброс стилей ссылок и кнопок 
 a,
 button,
 label,
@@ -70,6 +73,7 @@ svg * {
     transition-duration: var(--transition-duration);
 }
 
+// сброс стилей ссылок
 a {
     color: inherit;
 
@@ -83,8 +87,24 @@ a {
     }
 }
 
+// сброс стилей кнопок
 :focus-visible {
     outline: rem(2) dashed var(--color-light);
     outline-offset: rem(4);
     transition-duration: 0s !important;
+}
+
+// сброс стилей кнопок и лейблов с атрибутом aria-label
+a,
+button {
+    &[aria-label] {
+        position: relative;
+
+        &::before {
+            @include abs-center;
+            @include square(rem(44));
+
+            content: '';
+        }
+    }
 }
