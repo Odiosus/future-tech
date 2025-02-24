@@ -9,12 +9,20 @@ html {
 
 // сброс стилей браузера и общие стили
 body {
-    @include fluid-text(18, 24);
+    @include fluid-text(18, 14);
     
+    display: flex;
+    flex-direction: column;
     font-family: var(--font-family-base);
     letter-spacing: -0,03em;
     color: var(--color-gray-50);
     background-color: var(--color-dark);
+}
+
+// основной контент сайта
+main {
+    // (прижимаем футер к днищу) сделаем контент сайта растягиваемым высотой по всему экрану 
+    flex-grow: 1;
 }
 
 // заголовки
