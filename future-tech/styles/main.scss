@@ -9,3 +9,12 @@
 @use 'blocks/button';
 @use 'blocks/icon';
 @use 'blocks/logo';
+@use 'blocks/badge';
+@use 'blocks/soc1als';
+@use 'blocks/footer';
+
+
+//временно скрываем, чтобы не мешало при разработке
+.header {
+  display: none !important;
+}

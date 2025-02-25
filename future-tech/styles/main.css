@@ -416,7 +416,7 @@ button[aria-label]::before {
   top: 0;
   animation-name: scrolling-header;
   animation-fill-mode: both;
-  animation-timeline: scroll;
+  animation-timeline: scroll();
   animation-range: 6.25rem 12.5rem;
 }
 @keyframes scrolling-header {
@@ -644,6 +644,30 @@ button[aria-label]::before {
 
 .logo {
   max-width: clamp(7.875rem, 7.0306372549rem + 3.4640522876vw, 11.1875rem);
+}
+
+.footer__body {
+  padding-block: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
+  border-bottom: var(--border);
+}
+.footer__menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: start;
+  column-gap: clamp(1.25rem, 0.2941176471rem + 3.9215686275vw, 5rem);
+}
+.footer__menu-column {
+  display: grid;
+  row-gap: clamp(1rem, 0.681372549rem + 1.3071895425vw, 2.25rem);
+}
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.5rem, 0.3406862745rem + 0.6535947712vw, 1.125rem);
+}
+
+.header {
+  display: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */
