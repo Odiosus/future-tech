@@ -667,6 +667,22 @@ button[aria-label]::before {
   }
 }
 
+.soc1als__list {
+  display: flex;
+  column-gap: 1.25rem;
+}
+@media (width <= 90.06125rem) {
+  .soc1als__list {
+    column-gap: 0.875rem;
+  }
+}
+.soc1als__item {
+  display: flex;
+}
+.soc1als__link {
+  color: var(--color-light);
+}
+
 .footer {
   color: var(--color-dark-40);
 }
