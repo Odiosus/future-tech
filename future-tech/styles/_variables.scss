@@ -1,32 +1,38 @@
 @use 'helpers' as *;
 
 :root {
-    --color-light: #FFFFFF;
+  --color-light: #FFFFFF;
 
-    --color-dark: #141414;
-    --color-dark-10: #1A1A1A;
-    --color-dark-15: #262626;
-    --color-dark-20: #333333;
-    --color-dark-40: #666666;
+  --color-dark: #141414;
+  --color-dark-10: #1A1A1A;
+  --color-dark-15: #262626;
+  --color-dark-20: #333333;
+  --color-dark-40: #666666;
 
-    --color-gray-50: #7E7E81;
-    --color-gray-60: #98989A;
+  --color-gray-50: #7E7E81;
+  --color-gray-60: #98989A;
 
-    --color-accent: #FFD11A;
-    --color-red: #FF5500;
+  --color-accent: #FFD11A;
+  --color-red: #FF5500;
 
-    --border: #{rem(1)} solid var(--color-dark-15);
+  --dradient: linear-gradient(
+    45deg,
+    var(--color-dark-15) 64%,
+    var(--color-accent) 136%
+  ) border-box;
 
-    --font-family-base: 'Inter', sans-serif;
-    --font-family-accent: 'Kumbh Sans', sans-serif; 
+  --border: #{rem(1)} solid var(--color-dark-15);
 
-    // container #{rem(1600)} — такая конструкция для sass
-    --container-width: #{rem(1600)};
-    --container-padding-x: #{rem(16)};
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-accent: 'Kumbh Sans', sans-serif;
 
-    --transition-duration: 0,2s;
+  // container #{rem(1600)} — такая конструкция для sass
+  --container-width: #{rem(1600)};
+  --container-padding-x: #{rem(16)};
 
-    @include laptop {
-        --container-width: #{rem(1280)};
-    }
+  --transition-duration: 0, 2s;
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
 }

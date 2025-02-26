@@ -252,12 +252,17 @@ svg * {
   --color-gray-60: #98989A;
   --color-accent: #FFD11A;
   --color-red: #FF5500;
+  --dradient: linear-gradient(
+    45deg,
+    var(--color-dark-15) 64%,
+    var(--color-accent) 136%
+  ) border-box;
   --border: 0.0625rem solid var(--color-dark-15);
   --font-family-base: "Inter", sans-serif;
   --font-family-accent: "Kumbh Sans", sans-serif;
   --container-width: 100rem;
   --container-padding-x: 1rem;
-  --transition-duration: 0,2s;
+  --transition-duration: 0, 2s;
 }
 @media (width <= 90.06125rem) {
   :root {
@@ -646,6 +651,25 @@ button[aria-label]::before {
   max-width: clamp(7.875rem, 7.0306372549rem + 3.4640522876vw, 11.1875rem);
 }
 
+.badge {
+  display: inline-flex;
+  padding: clamp(0.125rem, 0.0931372549rem + 0.1307189542vw, 0.25rem) clamp(0.625rem, 0.5612745098rem + 0.2614379085vw, 0.875rem);
+  font-size: 1rem;
+  color: var(--color-light);
+  background: linear-gradient(var(--color-dark-10), var(--color-dark-10)) padding-box, var(--dradient);
+  border: 0.0625rem solid transparent;
+  border-radius: 0.375rem;
+}
+@media (width <= 90.06125rem) {
+  .badge {
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+  }
+}
+
+.footer {
+  color: var(--color-dark-40);
+}
 .footer__body {
   padding-block: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
   border-bottom: var(--border);
@@ -664,6 +688,11 @@ button[aria-label]::before {
   display: flex;
   flex-direction: column;
   row-gap: clamp(0.5rem, 0.3406862745rem + 0.6535947712vw, 1.125rem);
+}
+.footer__menu-item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
 }
 
 .header {

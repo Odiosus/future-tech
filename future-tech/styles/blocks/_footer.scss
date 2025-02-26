@@ -1,6 +1,9 @@
 @use '../helpers' as *;
 
 .footer {
+
+  color: var(--color-dark-40);
+
   &__body {
     padding-block: fluid(80, 40);
     border-bottom: var(--border);
@@ -21,6 +24,12 @@
       display: flex;
       flex-direction: column;
       row-gap: fluid(18, 8);
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      column-gap: rem(8);
     }
   }
 }
