@@ -1,1 +1,44 @@
 @use '../helpers' as *;
+
+.hero {
+  &__main {
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-areas:
+              'body resources-preview'
+              'metrics resources-preview';
+  }
+
+  &__body {
+    grid-area: body;
+    padding-top: rem(150);
+    padding-right: rem(50);
+    padding-bottom: rem(100);
+  }
+
+  &__subtitles {
+    @include fluid-text(30, 18);
+
+    font-family: var(--font-family-accent);
+    font-weight: 500;
+    color: var(--color-dark-40);
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__resources-preview {
+    grid-area: resources-preview;
+  }
+
+  &__metrics {
+    grid-area: metrics;
+  }
+}
