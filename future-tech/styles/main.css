@@ -800,6 +800,29 @@ button[aria-label]::before {
   grid-area: metrics;
 }
 
+.metrics__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.metrics__item {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 0.625rem;
+  padding: 3.125rem;
+}
+.metrics__item:first-child {
+  padding-left: 0;
+}
+.metrics__item:not(:last-child) {
+  border-right: var(--border);
+}
+.metrics__value {
+  font-weight: 600;
+}
+.metrics__sign {
+  color: var(--color-accent);
+}
+
 .header,
 .footer {
   display: none !important;
