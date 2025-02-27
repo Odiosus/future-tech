@@ -13,8 +13,15 @@
 @use 'blocks/soc1als';
 @use 'blocks/footer';
 
+@use 'blocks/hero';
+@use 'blocks/advantages-card';
+@use 'blocks/resources-preview';
+@use 'blocks/metrics';
+@use 'blocks/team';
+
 
 //временно скрываем, чтобы не мешало при разработке
-.header {
+.header,
+.footer {
   display: none !important;
 }

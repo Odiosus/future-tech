@@ -770,7 +770,8 @@ button[aria-label]::before {
   }
 }
 
-.header {
+.header,
+.footer {
   display: none !important;
 }
 
