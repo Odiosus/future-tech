@@ -6,4 +6,9 @@
   justify-content: end;
   align-items: start;
   row-gap: rem(30);
+
+  &__body {
+    display: grid;
+    row-gap: rem(14);
+  }
 }
