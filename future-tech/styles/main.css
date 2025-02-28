@@ -795,9 +795,21 @@ button[aria-label]::before {
 }
 .hero__resources-preview {
   grid-area: resources-preview;
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+  border-left: var(--border);
+  background: url("../../images/resources-preview/bg.png") 0 0/cover no-repeat;
 }
 .hero__metrics {
   grid-area: metrics;
+}
+
+.resources-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  row-gap: 1.875rem;
 }
 
 .metrics__list {

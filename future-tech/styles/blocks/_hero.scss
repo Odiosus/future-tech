@@ -36,6 +36,10 @@
 
   &__resources-preview {
     grid-area: resources-preview;
+    padding-left: rem(80);
+    padding-bottom: rem(80);
+    border-left: var(--border);
+    background: url("../../images/resources-preview/bg.png") 0 0/cover no-repeat,;
   }
 
   &__metrics {

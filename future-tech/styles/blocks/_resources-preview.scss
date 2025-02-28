@@ -1,1 +1,9 @@
 @use '../helpers' as *;
+
+.resources-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  row-gap: rem(30);
+}
