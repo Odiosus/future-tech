@@ -819,6 +819,34 @@ button[aria-label]::before {
   border-right: var(--border);
 }
 
+.advantages-card {
+  display: grid;
+  row-gap: 1.875rem;
+}
+.advantages-card__link {
+  --circleSize: 3.25rem;
+  --circleMarginLeft: 1.25rem;
+  position: relative;
+  display: grid;
+  row-gap: 0.25rem;
+  padding-right: calc(var(--circleSize) + var(--circleMarginLeft));
+}
+.advantages-card__link::after {
+  width: var(--circleSize);
+  height: var(--circleSize);
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  content: "";
+  right: 0;
+  background: url("../icons/arrow-top-right_black.svg") no-repeat center var(--color-accent);
+  border-radius: 50%;
+}
+.advantages-card__details {
+  font-size: clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem);
+  font-family: var(--font-family-accent);
+}
+
 .resources-preview {
   display: flex;
   flex-direction: column;
