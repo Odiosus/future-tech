@@ -1,23 +1,64 @@
 @use 'helpers' as *;
 
 .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-    margin-inline: auto;
-    padding-inline: var(--container-padding-x);
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
 }
 
 .visually-hidden {
-    @include visually-hidden;
+  @include visually-hidden;
 }
 
 .hidden-mobile {
-    @include mobile {
-        display: none !important;
-    }
+  @include mobile {
+    display: none !important;
+  }
 }
 
 .visible-mobile {
-    @include mobile-above {
-        display: none !important;
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+// делаем линию, выходящую за пределы контентного контейнера
+.full-vw-line {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: calc((100vw - var(--container-width)) / 2);
+    height: 1px;
+    background-color: var(--color-dark-15);
+  }
+
+  &--top {
+    &::before {
+      content: '';
+      bottom: 100%;
     }
+  }
+
+  &--bottom {
+    &::after {
+      content: '';
+      top: 100%;
+    }
+  }
+
+  &--left {
+    &::before,
+    &::after {
+      right: 100%;
+    }
+  }
+
+  &--right {
+    &::before,
+    &::after {
+      left: 100%;
+    }
+  }
 }

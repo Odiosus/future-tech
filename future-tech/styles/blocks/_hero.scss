@@ -44,9 +44,12 @@
 
   &__metrics {
     grid-area: metrics;
+    border-top: var(--border);
   }
 
   &__advantages {
+    border-block: var(--border);
+
     &-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
