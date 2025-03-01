@@ -4,6 +4,16 @@
   display: grid;
   row-gap: rem(30);
 
+  @include laptop {
+    row-gap: rem(20);
+  }
+
+  &__image {
+    @include laptop {
+      width: rem(40);
+    }
+  }
+
   &__link {
     --circleSize: #{rem(52)};
     --circleMarginLeft: #{rem(20)};
@@ -12,6 +22,13 @@
     display: grid;
     row-gap: rem(4);
     padding-right: calc(var(--circleSize) + var(--circleMarginLeft));
+
+    @include laptop {
+      --circleSize: #{rem(44)};
+      --circleMarginLeft: #{rem(14)};
+
+      row-gap: rem(2);
+    }
 
     //(рисуем иконку круга и стрелки) стилизация иконок с помощью классов и псевдоэлемента ::after
     &::after {

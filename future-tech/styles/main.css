@@ -805,6 +805,12 @@ button[aria-label]::before {
   padding-right: 3.125rem;
   padding-bottom: 6.25rem;
 }
+@media (width <= 90.06125rem) {
+  .hero__body {
+    padding-top: 6.25rem;
+    padding-right: 2.5rem;
+  }
+}
 .hero__subtitles {
   font-size: clamp(1.125rem, 0.9338235294rem + 0.7843137255vw, 1.875rem);
   font-family: var(--font-family-accent);
@@ -824,6 +830,12 @@ button[aria-label]::before {
   border-left: var(--border);
   background: url("../images/resources-preview/bg.png") 0 0/cover no-repeat;
 }
+@media (width <= 90.06125rem) {
+  .hero__resources-preview {
+    padding-left: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+}
 .hero__metrics {
   grid-area: metrics;
   border-top: var(--border);
@@ -839,6 +851,12 @@ button[aria-label]::before {
   --paddingX: 5rem;
   padding-block: 3.125rem;
 }
+@media (width <= 90.06125rem) {
+  .hero__advantages-item {
+    --paddingX: 3.125rem;
+    padding-block: 2.5rem;
+  }
+}
 .hero__advantages-item:not(:first-child) {
   padding-left: var(--paddingX);
 }
@@ -851,6 +869,16 @@ button[aria-label]::before {
   display: grid;
   row-gap: 1.875rem;
 }
+@media (width <= 90.06125rem) {
+  .advantages-card {
+    row-gap: 1.25rem;
+  }
+}
+@media (width <= 90.06125rem) {
+  .advantages-card__image {
+    width: 2.5rem;
+  }
+}
 .advantages-card__link {
   --circleSize: 3.25rem;
   --circleMarginLeft: 1.25rem;
@@ -858,6 +886,13 @@ button[aria-label]::before {
   display: grid;
   row-gap: 0.25rem;
   padding-right: calc(var(--circleSize) + var(--circleMarginLeft));
+}
+@media (width <= 90.06125rem) {
+  .advantages-card__link {
+    --circleSize: 2.75rem;
+    --circleMarginLeft: 0.875rem;
+    row-gap: 0.125rem;
+  }
 }
 .advantages-card__link::after {
   width: var(--circleSize);
@@ -882,9 +917,19 @@ button[aria-label]::before {
   align-items: start;
   row-gap: 1.875rem;
 }
+@media (width <= 90.06125rem) {
+  .resources-preview {
+    row-gap: 1.25rem;
+  }
+}
 .resources-preview__body {
   display: grid;
   row-gap: 0.875rem;
+}
+@media (width <= 90.06125rem) {
+  .resources-preview__body {
+    row-gap: 1.25rem;
+  }
 }
 
 .metrics__list {
@@ -896,6 +941,12 @@ button[aria-label]::before {
   flex-direction: column-reverse;
   row-gap: 0.625rem;
   padding: 3.125rem;
+}
+@media (width <= 90.06125rem) {
+  .metrics__item {
+    row-gap: 0.125rem;
+    padding: 1.875rem 2.5rem;
+  }
 }
 .metrics__item:first-child {
   padding-left: 0;
@@ -917,11 +968,22 @@ button[aria-label]::before {
   background-color: var(--color-dark-10);
   border-radius: 6.25rem;
 }
+@media (width <= 90.06125rem) {
+  .team {
+    --personImageSize: 3.125rem;
+    padding: 0.5rem;
+  }
+}
 .team__person {
   width: var(--personImageSize);
   background-color: var(--color-dark-15);
   border: 0.125rem solid var(--color-dark-40);
   border-radius: 50%;
+}
+@media (width <= 90.06125rem) {
+  .team__person {
+    border-width: 0.0625rem;
+  }
 }
 .team__person:not(:first-child) {
   margin-left: calc(var(--personImageSize) / 4 * -1);

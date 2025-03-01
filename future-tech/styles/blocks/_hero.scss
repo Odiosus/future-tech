@@ -14,6 +14,11 @@
     padding-top: rem(150);
     padding-right: rem(50);
     padding-bottom: rem(100);
+
+    @include laptop {
+      padding-top: rem(100);
+      padding-right: rem(40);
+    }
   }
 
   &__subtitles {
@@ -40,6 +45,11 @@
     padding-bottom: rem(80);
     border-left: var(--border);
     background: url("../images/resources-preview/bg.png") 0 0/cover no-repeat,;
+
+    @include laptop {
+      padding-left: rem(50);
+      padding-bottom: rem(50);
+    }
   }
 
   &__metrics {
@@ -59,6 +69,12 @@
       --paddingX: #{rem(80)};
 
       padding-block: rem(50);
+
+      @include laptop {
+        --paddingX: #{rem(50)};
+
+        padding-block: rem(40);
+      }
 
       &:not(:first-child) {
         padding-left: var(--paddingX);
