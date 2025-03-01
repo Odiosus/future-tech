@@ -17,6 +17,11 @@
       padding: rem(30) rem(40);
     }
 
+    @include tablet {
+      row-gap: 0;
+      padding: rem(20);
+    }
+
     &:first-child {
       padding-left: 0;
     }

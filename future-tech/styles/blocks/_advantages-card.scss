@@ -8,9 +8,17 @@
     row-gap: rem(20);
   }
 
+  @include mobile {
+    row-gap: rem(14);
+  }
+
   &__image {
     @include laptop {
       width: rem(40);
+    }
+
+    @include mobile {
+      width: rem(30);
     }
   }
 
@@ -28,6 +36,10 @@
       --circleMarginLeft: #{rem(14)};
 
       row-gap: rem(2);
+    }
+
+    @include mobile {
+      --circleSize: #{rem(40)};
     }
 
     //(рисуем иконку круга и стрелки) стилизация иконок с помощью классов и псевдоэлемента ::after
