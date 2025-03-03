@@ -19,9 +19,16 @@
 @use 'blocks/metrics';
 @use 'blocks/team';
 
+@use 'blocks/section';
+@use 'blocks/tile';
+@use 'blocks/list';
+@use 'blocks/card';
+@use 'blocks/tag';
+
 
 //временно скрываем, чтобы не мешало при разработке
 .header,
+main > *:not(:last-child),
 .footer {
   display: none !important;
 }
