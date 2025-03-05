@@ -1092,6 +1092,9 @@ button[aria-label]::before {
 .section__subtitle {
   justify-self: start;
 }
+.section__body {
+  border-block: var(--border);
+}
 
 .tag {
   font-size: clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem);

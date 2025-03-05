@@ -19,4 +19,8 @@
   &__subtitle {
     justify-self: start;
   }
+
+  &__body {
+    border-block: var(--border);
+  }
 }
