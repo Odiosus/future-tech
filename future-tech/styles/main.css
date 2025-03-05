@@ -1096,6 +1096,10 @@ button[aria-label]::before {
   border-block: var(--border);
 }
 
+.list__item:not(:last-child) {
+  border-bottom: var(--border);
+}
+
 .tag {
   font-size: clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem);
   padding: 0.375rem 0.625rem;
