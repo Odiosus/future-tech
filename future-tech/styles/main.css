@@ -1096,6 +1096,18 @@ button[aria-label]::before {
   border-block: var(--border);
 }
 
+.tile {
+  padding: clamp(1.5rem, 1.2450980392rem + 1.045751634vw, 2.5rem);
+  background-color: var(--color-dark-10);
+  border-radius: 0.75rem;
+  border: var(--border);
+}
+@media (width <= 90.06125rem) {
+  .tile {
+    border-radius: 0.625rem;
+  }
+}
+
 .list__item:not(:last-child) {
   border-bottom: var(--border);
 }
