@@ -25,6 +25,12 @@
 @use 'blocks/card';
 @use 'blocks/tag';
 
+@use 'blocks/blog-card';
+@use 'blocks/blog-actions';
+@use 'blocks/tabs';
+@use 'blocks/person-card';
+
+
 
 //временно скрываем, чтобы не мешало при разработке
 .header,
