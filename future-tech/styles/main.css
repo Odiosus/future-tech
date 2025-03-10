@@ -1213,6 +1213,58 @@ button[aria-label]::before {
   }
 }
 
+.tabs__header {
+  border-bottom: var(--border);
+}
+.tabs__buttons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1.25rem;
+  padding-block: clamp(1.25rem, 0.7720588235rem + 1.9607843137vw, 3.125rem);
+}
+@media (width <= 90.06125rem) {
+  .tabs__buttons {
+    column-gap: 0.875rem;
+  }
+}
+.tabs__button {
+  padding: clamp(1.125rem, 0.9338235294rem + 0.7843137255vw, 1.875rem) 0.6875rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  color: var(--color-gray-60);
+  background-color: transparent;
+  font-size: 1.125rem;
+}
+@media (width <= 90.06125rem) {
+  .tabs__button {
+    font-size: 0.875rem;
+  }
+}
+@media (any-hover: hover) {
+  .tabs__button:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .tabs__button:active {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+}
+.tabs__button.is-active {
+  background-color: var(--color-dark-10);
+  color: var(--color-light);
+  font-weight: 500;
+  pointer-events: none;
+}
+.tabs__content:not(.is-active) {
+  display: none;
+}
+.tabs__content:focus-visible {
+  outline-offset: -1rem;
+}
+
 .header,
 main > *:not(:last-child),
 .footer {
