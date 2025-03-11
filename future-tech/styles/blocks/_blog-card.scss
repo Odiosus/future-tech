@@ -1,1 +1,8 @@
 @use '../helpers' as *;
+
+.blog-card {
+  display: grid;
+  grid-template-columns: 24% 1fr auto;
+  column-gap: fluid(50, 28);
+  padding-block: fluid(80, 40);
+}

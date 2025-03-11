@@ -1213,6 +1213,13 @@ button[aria-label]::before {
   }
 }
 
+.blog-card {
+  display: grid;
+  grid-template-columns: 24% 1fr auto;
+  column-gap: clamp(1.75rem, 1.3995098039rem + 1.4379084967vw, 3.125rem);
+  padding-block: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
+}
+
 .tabs__header {
   border-bottom: var(--border);
 }
@@ -1263,6 +1270,11 @@ button[aria-label]::before {
 }
 .tabs__content:focus-visible {
   outline-offset: -1rem;
+}
+
+.person-card {
+  display: flex;
+  align-items: center;
 }
 
 .header,
