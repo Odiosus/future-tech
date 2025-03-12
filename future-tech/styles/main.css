@@ -1275,8 +1275,8 @@ button[aria-label]::before {
 .person-card {
   display: flex;
   align-items: center;
+  column-gap: clamp(0.5rem, 0.3725490196rem + 0.522875817vw, 1rem);
 }
-
 .header,
 main > *:not(:last-child),
 .footer {
