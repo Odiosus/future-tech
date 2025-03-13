@@ -1277,6 +1277,35 @@ button[aria-label]::before {
   align-items: center;
   column-gap: clamp(0.5rem, 0.3725490196rem + 0.522875817vw, 1rem);
 }
+.person-card__image {
+  width: 5rem;
+  background-color: var(--color-dark-15);
+  border-radius: 50%;
+}
+@media (width <= 90.06125rem) {
+  .person-card__image {
+    width: 3.75rem;
+  }
+}
+.person-card__body {
+  display: grid;
+}
+@media (width > 90.06125rem) {
+  .person-card__body {
+    row-gap: 0.125rem;
+  }
+}
+.person-card__name {
+  color: var(--color-light);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+@media (width <= 90.06125rem) {
+  .person-card__name {
+    font-size: 1.125rem;
+  }
+}
+
 .header,
 main > *:not(:last-child),
 .footer {
