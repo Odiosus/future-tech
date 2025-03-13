@@ -5,4 +5,13 @@
   grid-template-columns: 24% 1fr auto;
   column-gap: fluid(50, 28);
   padding-block: fluid(80, 40);
+
+  &__body {
+    display: grid;
+    row-gap: fluid(30, 20);
+  }
+
+  &__date {
+    color: var(--color-gray-60);
+  }
 }

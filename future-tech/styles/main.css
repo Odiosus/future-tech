@@ -1219,6 +1219,13 @@ button[aria-label]::before {
   column-gap: clamp(1.75rem, 1.3995098039rem + 1.4379084967vw, 3.125rem);
   padding-block: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
 }
+.blog-card__body {
+  display: grid;
+  row-gap: clamp(1.25rem, 1.0906862745rem + 0.6535947712vw, 1.875rem);
+}
+.blog-card__date {
+  color: var(--color-gray-60);
+}
 
 .tabs__header {
   border-bottom: var(--border);
