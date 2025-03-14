@@ -14,4 +14,9 @@
   &__date {
     color: var(--color-gray-60);
   }
+
+  &__info {
+    display: grid;
+    row-gap: fluid(10, 4);
+  }
 }

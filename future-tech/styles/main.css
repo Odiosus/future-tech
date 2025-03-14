@@ -1226,6 +1226,10 @@ button[aria-label]::before {
 .blog-card__date {
   color: var(--color-gray-60);
 }
+.blog-card__info {
+  display: grid;
+  row-gap: clamp(0.25rem, 0.1544117647rem + 0.3921568627vw, 0.625rem);
+}
 
 .tabs__header {
   border-bottom: var(--border);
