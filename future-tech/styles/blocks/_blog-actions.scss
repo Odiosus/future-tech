@@ -1,11 +1,18 @@
 @use '../helpers' as *;
 
 .blog-actions {
-  display: flex;
-  column-gap: fluid(10);
+  &__list {
+    display: flex;
+    column-gap: fluid(10);
 
-  @include laptop {
-    rem(8)
+    @include laptop {
+      column-gap: rem(8)
+    }
   }
+
+  &__button {
+    background-color: var(--color-dark-10);
+  }
+
 
 }
