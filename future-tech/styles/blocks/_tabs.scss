@@ -3,6 +3,10 @@
 .tabs {
   &__header {
     border-bottom: var(--border);
+
+    @include tablet {
+      overflow: auto;
+    }
   }
 
   &__buttons {
@@ -13,6 +17,10 @@
 
     @include laptop {
       column-gap: rem(14);
+    }
+
+    @include tablet {
+      width: max-content;
     }
   }
 

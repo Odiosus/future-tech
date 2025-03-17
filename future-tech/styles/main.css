@@ -1286,6 +1286,11 @@ button[aria-label]::before {
 .tabs__header {
   border-bottom: var(--border);
 }
+@media (width <= 63.99875rem) {
+  .tabs__header {
+    overflow: auto;
+  }
+}
 .tabs__buttons {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -1295,6 +1300,11 @@ button[aria-label]::before {
 @media (width <= 90.06125rem) {
   .tabs__buttons {
     column-gap: 0.875rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .tabs__buttons {
+    width: max-content;
   }
 }
 .tabs__button {
