@@ -19,4 +19,8 @@
     display: grid;
     row-gap: fluid(10, 4);
   }
+
+  &__link {
+    align-self: center;
+  }
 }

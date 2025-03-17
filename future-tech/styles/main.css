@@ -1230,6 +1230,9 @@ button[aria-label]::before {
   display: grid;
   row-gap: clamp(0.25rem, 0.1544117647rem + 0.3921568627vw, 0.625rem);
 }
+.blog-card__link {
+  align-self: center;
+}
 
 .blog-actions__list {
   display: flex;
