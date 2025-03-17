@@ -1257,6 +1257,29 @@ button[aria-label]::before {
     font-size: 0.875rem;
   }
 }
+.blog-actions__button.is-active svg * {
+  fill: var(--color-red);
+  stroke: var(--color-red);
+}
+.blog-actions__icon-wrapper {
+  --size: 1.5rem;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+}
+@media (width <= 90.06125rem) {
+  .blog-actions__icon-wrapper {
+    --size: 1.25rem;
+  }
+}
+.blog-actions__icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+.blog-actions__icon-wrapper svg * {
+  fill: transparent;
+}
+
 .tabs__header {
   border-bottom: var(--border);
 }
