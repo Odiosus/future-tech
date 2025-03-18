@@ -5,7 +5,7 @@ class Tabs {
     // создаем поля класса
     selectors = {
         root: rootSelector,
-        button: '[data-js-tab-button]',
+        button: '[data-js-tabs-button]',
         content: '[data-js-tabs-content]',
     }
 
@@ -60,6 +60,7 @@ class Tabs {
         })
     }
 }
+
 
 // инициализация логики всех табов на одной странице
 class TabsCollection {
