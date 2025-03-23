@@ -67,6 +67,10 @@
         grid-template-columns: 1fr;
       }
     }
+
+    &--2-cols-alt {
+      grid-template-columns: auto 1fr;
+    }
   }
 
   &__cell {
@@ -74,5 +78,14 @@
     flex-direction: column;
     justify-content: start;
     row-gap: fluid(20, 4);
+
+    &__wide {
+      grid-column: -1 / 1;
+      gap: rem(30) rem(20);
+
+      @include laptop {
+        gap: rem(24) rem(16);
+      }
+    }
   }
 }

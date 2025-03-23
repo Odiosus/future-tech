@@ -1192,11 +1192,23 @@ button[aria-label]::before {
     grid-template-columns: 1fr;
   }
 }
+.card__grid--2-cols-alt {
+  grid-template-columns: auto 1fr;
+}
 .card__cell {
   display: flex;
   flex-direction: column;
   justify-content: start;
   row-gap: clamp(0.25rem, -0.0049019608rem + 1.045751634vw, 1.25rem);
+}
+.card__cell__wide {
+  grid-column: -1/1;
+  gap: 1.875rem 1.25rem;
+}
+@media (width <= 90.06125rem) {
+  .card__cell__wide {
+    gap: 1.5rem 1rem;
+  }
 }
 
 .tag {
