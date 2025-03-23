@@ -1,2 +1,12 @@
 @use '../helpers' as *;
 
+.download-info {
+   display: grid;
+   grid-template-columns: 1fr auto;
+   align-items: center;
+  column-gap: rem(50);
+
+  @include laptop {
+    column-gap: rem(30);
+  }
+}

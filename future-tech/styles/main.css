@@ -1403,6 +1403,18 @@ button[aria-label]::before {
   }
 }
 
+.download-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 3.125rem;
+}
+@media (width <= 90.06125rem) {
+  .download-info {
+    column-gap: 1.875rem;
+  }
+}
+
 .header,
 main > *:not(:last-child),
 .footer {
