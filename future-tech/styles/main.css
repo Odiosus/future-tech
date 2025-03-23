@@ -1414,6 +1414,16 @@ button[aria-label]::before {
     column-gap: 1.875rem;
   }
 }
+.download-info__team {
+  --personImageSize: 3.125rem;
+  background-color: var(--color-dark);
+  border-radius: 0.75rem;
+}
+@media (width <= 90.06125rem) {
+  .download-info__team {
+    --personImageSize: 2.5rem;
+  }
+}
 
 .header,
 main > *:not(:last-child),
