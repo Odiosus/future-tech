@@ -1256,7 +1256,11 @@ button[aria-label]::before {
     border-radius: 0.625rem;
   }
 }
-.card__cell-subtti .card__cell-link {
+.card__cell-subtitle {
+  font: inherit;
+  color: inherit;
+}
+.card__cell-link {
   grid-area: link;
 }
 
