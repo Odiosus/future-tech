@@ -1,6 +1,5 @@
 @use '../helpers' as *;
 
-
 .card {
   @include tablet-above {
     display: grid;
@@ -36,10 +35,14 @@
     &-main {
       display: grid;
       row-gap: fluid(50, 24);
+
+      @include tablet {
+        justify-content: start;
+      }
     }
 
     &-icon {
-      width: fluid(80, 60);
+      width: fluid(80, 50);
     }
 
     &-info {
@@ -52,7 +55,7 @@
     padding-right: 0;
 
     @include tablet {
-      padding: rem(30) rem(16);
+      padding: rem(30) 0;
     }
   }
 
@@ -69,8 +72,17 @@
     }
 
     &--2-cols-alt {
-      grid-template-columns: auto 1fr;
+      gap: rem(30) rem(20);
+
+      @include laptop {
+        gap: rem(24) rem(16);
+      }
+
+      @include mobile-above {
+        grid-template-columns: auto 1fr;
+      }
     }
+
   }
 
   &__cell {
@@ -79,13 +91,60 @@
     justify-content: start;
     row-gap: fluid(20, 4);
 
-    &__wide {
+    // TODO выбираем только те элементы, у которых есть один дочерний элемент
+    &:has(> *:only-child) {
+      justify-content: center;
+    }
+
+    &:has(.card__cell-link) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        'other link'
+        'other link';
+      align-items: center;
+      gap: fluid(14, 10) rem(20);
+    }
+
+    &:not(.tile) {
+      @include mobile-s {
+        grid-template: initial;
+
+        .card__cell-link {
+          grid-area: initial;
+        }
+      }
+    }
+
+
+    &--wide {
       grid-column: -1 / 1;
-      gap: rem(30) rem(20);
+    }
+
+    &--wide-on-mobile-s {
+      @include mobile-s {
+        grid-column: -1 / 1;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: fluid(332, 169);
+      object-fit: cover;
+      border-radius: rem(12);
 
       @include laptop {
-        gap: rem(24) rem(16);
+        border-radius: rem(10);
       }
+    }
+
+    &-subtitle {
+      font: inherit;
+      color: inherit;
+    }
+
+    &-link {
+      grid-area: link;
     }
   }
 }
