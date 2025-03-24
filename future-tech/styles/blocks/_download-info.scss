@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .download-info {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   column-gap: rem(50);
