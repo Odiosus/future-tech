@@ -32,6 +32,10 @@
 
 @use 'blocks/download-info';
 
+@use 'blocks/review-card';
+@use 'blocks/rating-view';
+@use 'blocks/bordered-greed';
+
 
 //временно скрываем, чтобы не мешало при разработке
 .header,
