@@ -25,4 +25,11 @@
     color: var(--color-light);
     text-align: center;
   }
+
+  &__rating-view {
+    @include abs-center;
+
+    top: 0;
+
+  }
 }
