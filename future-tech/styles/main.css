@@ -1525,6 +1525,20 @@ button[aria-label]::before {
   top: 0;
 }
 
+.rating-view {
+  display: inline-flex;
+  column-gap: 0.4375rem;
+  padding: 0.625rem 1rem;
+  border: var(--border);
+  border-radius: 6.25rem;
+}
+@media (width <= 90.06125rem) {
+  .rating-view {
+    column-gap: 0.4375rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
 .bordered-grid {
   --сolumns: 1;
   --itemPaddindY: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);

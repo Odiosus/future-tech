@@ -1,1 +1,14 @@
 @use '../helpers' as *;
+
+.rating-view {
+  display: inline-flex;
+  column-gap: rem(7);
+  padding: rem(10) rem(16);
+  border: var(--border);
+  border-radius: rem(100);
+
+  @include laptop {
+    column-gap: rem(7);
+    padding: rem(8) rem(12);
+  }
+}
