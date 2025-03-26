@@ -1529,6 +1529,7 @@ button[aria-label]::before {
   display: inline-flex;
   column-gap: 0.4375rem;
   padding: 0.625rem 1rem;
+  background-color: var(--color-dark);
   border: var(--border);
   border-radius: 6.25rem;
 }
@@ -1536,6 +1537,20 @@ button[aria-label]::before {
   .rating-view {
     column-gap: 0.4375rem;
     padding: 0.5rem 0.75rem;
+  }
+}
+.rating-view__star {
+  --size: 1.5rem;
+  width: var(--size);
+  height: var(--size);
+  background: url("../icons/star_grey.svg") center/contain no-repeat;
+}
+.rating-view__star.is-active {
+  background-image: url("../icons/star_yellow.svg");
+}
+@media (width <= 90.06125rem) {
+  .rating-view__star {
+    --size: 1.25rem;
   }
 }
 
