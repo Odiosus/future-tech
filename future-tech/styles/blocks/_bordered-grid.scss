@@ -2,7 +2,7 @@
 
 .bordered-grid {
   --сolumns: 1;
-  --itemPaddindY: fluid(80, 40);
+  --itemPaddindY: #{fluid(80, 40)};
 
   display: grid;
   grid-template-columns: repeat(var(--сolumns), 1fr);
@@ -45,4 +45,9 @@
       }
     }
   }
+
+  &__item {
+    padding-block: var(--itemPaddindY);
+  }
+
 }

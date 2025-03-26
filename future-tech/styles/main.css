@@ -1510,10 +1510,17 @@ button[aria-label]::before {
     --imageSize: 3.125rem;
   }
 }
+.review-card__body {
+  position: relative;
+  padding: clamp(1.25rem, 1.0906862745rem + 0.6535947712vw, 1.875rem);
+  padding-top: clamp(1.875rem, 1.556372549rem + 1.3071895425vw, 3.125rem);
+  color: var(--color-light);
+  text-align: center;
+}
 
 .bordered-grid {
   --сolumns: 1;
-  --itemPaddindY: fluid(80, 40);
+  --itemPaddindY: clamp(2.5rem, 1.862745098rem + 2.614379085vw, 5rem);
   display: grid;
   grid-template-columns: repeat(var(--сolumns), 1fr);
 }
@@ -1557,6 +1564,9 @@ button[aria-label]::before {
 }
 .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1), .bordered-grid--3-cols .bordered-grid__item:nth-child(3n) {
   padding-left: var(--itemPaddingX);
+}
+.bordered-grid__item {
+  padding-block: var(--itemPaddindY);
 }
 
 .header,
