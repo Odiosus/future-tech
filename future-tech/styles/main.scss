@@ -36,6 +36,8 @@
 @use 'blocks/rating-view';
 @use 'blocks/bordered-grid';
 
+@use 'blocks/about';
+@use 'blocks/about-card';
 
 //временно скрываем, чтобы не мешало при разработке
 .header,
