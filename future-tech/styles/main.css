@@ -1496,6 +1496,8 @@ button[aria-label]::before {
   flex-direction: column;
   align-items: center;
   row-gap: 2.5rem;
+  max-width: 31.25rem;
+  margin-inline: auto;
 }
 @media (width <= 90.06125rem) {
   .review-card {
@@ -1566,40 +1568,54 @@ button[aria-label]::before {
 .bordered-grid--3-cols {
   --сolumns: 3;
   --itemPaddingX: 3.125rem;
-  /**
-   Выбираем элементы в 1-й и 2-й колонке
-   */
 }
-.bordered-grid--3-cols laptop {
-  --itemPaddingX: 2.5rem;
+@media (width <= 90.06125rem) {
+  .bordered-grid--3-cols {
+    --itemPaddingX: 2.5rem;
+  }
 }
-.bordered-grid--3-cols .bordered-grid__item {
-  /**
-  Выбираем элементы во 2-й колонке
-  */
-  /**
-  Выбираем элементы во 2-й и 3-й колонке
-  */
+@media (width > 63.99875rem) {
+  .bordered-grid--3-cols {
+    /**
+    Выбираем элементы в 1-й и 2-й колонке
+    */
+  }
+  .bordered-grid--3-cols .bordered-grid__item {
+    /**
+    Выбираем элементы во 2-й колонке
+    */
+    /**
+    Выбираем элементы во 2-й и 3-й колонке
+    */
+  }
+  .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-2), .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1) {
+    padding-right: var(--itemPaddingX);
+    border-right: var(--border);
+  }
+  .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1) {
+    position: relative;
+  }
+  .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1)::before {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    content: "";
+    bottom: 0;
+    width: 100vw;
+    height: 0.0625rem;
+    background-color: var(--color-dark-15);
+  }
+  .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1), .bordered-grid--3-cols .bordered-grid__item:nth-child(3n) {
+    padding-left: var(--itemPaddingX);
+  }
 }
-.bordered-grid--3-cols .bordered-grid__item:nth-child(3n-2), .bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1) {
-  padding-right: var(--itemPaddingX);
-  border-right: var(--border);
-}
-.bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1) {
-  position: relative;
-}
-.bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1)::before {
-  position: absolute;
-  left: 50%;
-  translate: -50%;
-  content: "";
-  bottom: 0;
-  width: 100vw;
-  height: 0.0625rem;
-  background-color: var(--color-dark-15);
-}
-.bordered-grid--3-cols .bordered-grid__item:nth-child(3n-1), .bordered-grid--3-cols .bordered-grid__item:nth-child(3n) {
-  padding-left: var(--itemPaddingX);
+@media (width <= 63.99875rem) {
+  .bordered-grid--3-cols {
+    --columns: 1;
+  }
+  .bordered-grid--3-cols .bordered-grid__item:not(:last-child) {
+    border-bottom: var(--border);
+  }
 }
 .bordered-grid__item {
   padding-block: var(--itemPaddindY);
