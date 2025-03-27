@@ -15,33 +15,43 @@
     --сolumns: 3;
     --itemPaddingX: #{rem(50)};
 
-    laptop {
+    @include laptop {
       --itemPaddingX: #{rem(40)};
     }
 
-    /**
+    @include tablet-above {
+      /**
      Выбираем элементы в 1-й и 2-й колонке
      */
-    .bordered-grid__item {
-      &:nth-child(3n - 2),
-      &:nth-child(3n - 1) {
-        padding-right: var(--itemPaddingX);
-        border-right: var(--border);
-      }
+      .bordered-grid__item {
+        &:nth-child(3n - 2),
+        &:nth-child(3n - 1) {
+          padding-right: var(--itemPaddingX);
+          border-right: var(--border);
+        }
 
-      /**
-     Выбираем элементы во 2-й колонке
-     */
-      &:nth-child(3n - 1) {
-        @include full-vw-centered-line(bottom);
-      }
+        /**
+       Выбираем элементы во 2-й колонке
+       */
+        &:nth-child(3n - 1) {
+          @include full-vw-centered-line(bottom);
+        }
 
-      /**
-     Выбираем элементы во 2-й и 3-й колонке
-     */
-      &:nth-child(3n - 1),
-      &:nth-child(3n) {
-        padding-left: var(--itemPaddingX);
+        /**
+       Выбираем элементы во 2-й и 3-й колонке
+       */
+        &:nth-child(3n - 1),
+        &:nth-child(3n) {
+          padding-left: var(--itemPaddingX);
+        }
+      }
+    }
+
+    @include tablet {
+      --columns: 1;
+
+      .bordered-grid__item:not(:last-child) {
+        border-bottom: var(--border);
       }
     }
   }
