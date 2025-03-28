@@ -1,1 +1,39 @@
 @use '../helpers' as *;
+
+.about {
+  padding-block: fluid(120, 40);
+  background-color: var(--color-dark-10);
+
+  &__inner {
+    display: grid;
+    row-gap: fluid(100, 40);
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 'icon info' 'icon description';
+    gap: rem(30) fluid(80, 20);
+
+    @include laptop {
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      row-gap: rem(4);
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: rem(16);
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+  }
+
+  &__icon {
+    grid-area: icon;
+  }
+}
