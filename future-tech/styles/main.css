@@ -1684,6 +1684,26 @@ button[aria-label]::before {
     grid-area: description;
   }
 }
+.about__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background-color: var(--color-dark-10);
+  border-radius: 0.75rem;
+}
+@media (width <= 90.06125rem) {
+  .about__list {
+    gap: 1.25rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+  }
+}
+@media (width > 47.99875rem) {
+  .about__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 .header,
 main > *:not(:last-child),
