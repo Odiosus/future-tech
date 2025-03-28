@@ -1686,10 +1686,9 @@ button[aria-label]::before {
 }
 .about__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   padding: 1.25rem;
-  background-color: var(--color-dark-10);
+  background-color: var(--color-dark);
   border-radius: 0.75rem;
 }
 @media (width <= 90.06125rem) {

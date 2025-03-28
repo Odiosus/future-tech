@@ -72,10 +72,9 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: rem(20);
     padding: rem(20);
-    background-color: var(--color-dark-10);
+    background-color: var(--color-dark);
     border-radius: rem(12);
 
     @include laptop {
