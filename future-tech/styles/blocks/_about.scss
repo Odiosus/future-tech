@@ -12,16 +12,28 @@
   &__header {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas: 'icon info' 'icon description';
+    grid-template-areas:
+      'icon info'
+      'icon description';
     gap: rem(30) fluid(80, 20);
+    align-items: center;
 
     @include laptop {
       row-gap: rem(20);
     }
 
     @include mobile {
+      grid-template-areas:
+        'icon subtitle'
+        'title title'
+        'description description';
       row-gap: rem(4);
     }
+  }
+
+  &__icon {
+    grid-area: icon;
+    width: fluid(150, 60);
   }
 
   &__info {
@@ -31,9 +43,30 @@
     @include laptop {
       row-gap: rem(10);
     }
+
+    @include mobile {
+      display: contents;
+    }
   }
 
-  &__icon {
-    grid-area: icon;
+  &__subtitle {
+    justify-self: start;
+
+    @include mobile {
+      grid-area: subtitle;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      margin-top: rem(20);
+      grid-area: title;
+    }
+  }
+
+  &__description {
+    @include mobile {
+      grid-area: description;
+    }
   }
 }
