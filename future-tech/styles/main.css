@@ -325,6 +325,36 @@ svg * {
   left: 100%;
 }
 
+.circle-icon {
+  --circleSize: 3.25rem;
+  --circleMarginLeft: 1.25rem;
+  position: relative;
+  min-height: var(--circleSize);
+  padding-right: calc(var(--circleSize) + var(--circleMarginLeft));
+}
+@media (width <= 90.06125rem) {
+  .circle-icon {
+    --circleSize: 2.75rem;
+    --circleMarginLeft: 0.875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .circle-icon {
+    --circleSize: 2.5rem;
+  }
+}
+.circle-icon::after {
+  width: var(--circleSize);
+  height: var(--circleSize);
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  content: "";
+  right: 0;
+  background: url("../icons/arrow-top-right_black.svg") no-repeat center var(--color-accent);
+  border-radius: 50%;
+}
+
 html.is-lock {
   overflow: hidden;
 }
@@ -957,26 +987,8 @@ button[aria-label]::before {
 }
 @media (width <= 90.06125rem) {
   .advantages-card__link {
-    --circleSize: 2.75rem;
-    --circleMarginLeft: 0.875rem;
     row-gap: 0.125rem;
   }
-}
-@media (width <= 47.99875rem) {
-  .advantages-card__link {
-    --circleSize: 2.5rem;
-  }
-}
-.advantages-card__link::after {
-  width: var(--circleSize);
-  height: var(--circleSize);
-  position: absolute;
-  top: 50%;
-  translate: 0 -50%;
-  content: "";
-  right: 0;
-  background: url("../icons/arrow-top-right_black.svg") no-repeat center var(--color-accent);
-  border-radius: 50%;
 }
 .advantages-card__details {
   font-size: clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem);
@@ -1711,6 +1723,8 @@ button[aria-label]::before {
 }
 .about-card__title {
   font-size: clamp(1rem, 0.9044117647rem + 0.3921568627vw, 1.375rem);
+  display: flex;
+  align-items: center;
   font-family: var(--font-family-base);
   font-weight: 600;
 }
