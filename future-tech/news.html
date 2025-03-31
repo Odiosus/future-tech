@@ -73,6 +73,7 @@
 <main>
   <!--        hero       -->
   <section class="hero-alt" aria-labelledby="news-title">
+    <!--        hero__header        -->
     <header class="hero-alt__header">
       <div class="hero-alt__header-inner container">
         <h1 class="hero-alt__title" id="news-title">
@@ -83,7 +84,49 @@
           updates on the most significant events, trends, and stories. Discover the world through our news coverage.</p>
       </div>
     </header>
-    <div class="hero-alt__body"></div>
+    <!--        hero__body        -->
+    <div class="hero-alt__body">
+      <ul class="list">
+        <li class="list__item">
+          <!--          news-card          -->
+          <article class="news-card container">
+            <img
+              src="./images/news/1.jpg"
+              alt=""
+              class="news-card__image"
+              width="515" height="427" loading="lazy"
+            >
+            <div class="news-card__body">
+              <h2 class="news-card__title">Global Climate Summit Addresses Urgent Climate Action</h2>
+              <div class="news-card__description">
+                <p>World leaders gathered at the Global Climate Summit to discuss urgent climate action, emissions
+                  reductions, and renewable energy targets.</p>
+              </div>
+            </div>
+            <div class="news-card__summary summary">
+              <dl class="summary__list">
+                <div class="summary__item">
+                  <dt class="summary__key">Category</dt>
+                  <dd class="summary__value">Environment</dd>
+                </div>
+                <div class="summary__item">
+                  <dt class="summary__key">Publication Date</dt>
+                  <dd class="summary__value">
+                    <time datetime="2023-10-10">October 10, 2023</time></dd>
+                </div>
+                <div class="summary__item">
+                  <dt class="summary__key">Author</dt>
+                  <dd class="summary__value">Jane Smith</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="news-card__controls">
+
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
   </section>
 </main>
 <!-- footer content -->
