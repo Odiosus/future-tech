@@ -1729,6 +1729,48 @@ button[aria-label]::before {
   font-weight: 600;
 }
 
+.hero-alt__header {
+  padding-top: clamp(2.5rem, 1.0661764706rem + 5.8823529412vw, 8.125rem);
+  padding-bottom: clamp(2.5rem, 0.7475490196rem + 7.1895424837vw, 9.375rem);
+}
+.hero-alt__header-inner {
+  display: grid;
+  align-items: center;
+  gap: 1.25rem 5rem;
+}
+@media (width <= 90.06125rem) {
+  .hero-alt__header-inner {
+    column-gap: 3.75rem;
+  }
+}
+@media (width > 47.99875rem) {
+  .hero-alt__header-inner {
+    grid-template-columns: auto 1fr;
+  }
+}
+@media (width <= 47.99875rem) {
+  .hero-alt__header-inner {
+    row-gap: 0.875rem;
+  }
+}
+.hero-alt__title {
+  grid-column: -1/1;
+}
+@media (width > 47.99875rem) {
+  .hero-alt__title-hidden-part {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+  }
+}
+
 .header,
 main > *:not(:last-child),
 .footer {
