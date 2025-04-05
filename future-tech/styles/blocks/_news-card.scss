@@ -15,4 +15,13 @@
       border-radius: rem(10);
     }
   }
+
+  &__body {
+    display: grid;
+    row-gap: rem(10);
+
+    @include laptop {
+      row-gap: rem(4);
+    }
+  }
 }
