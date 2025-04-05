@@ -7,4 +7,12 @@
   @include laptop {
     row-gap: rem(16);
   }
+
+  &__image {
+    border-radius: rem(12);
+
+    @include laptop {
+      border-radius: rem(10);
+    }
+  }
 }
