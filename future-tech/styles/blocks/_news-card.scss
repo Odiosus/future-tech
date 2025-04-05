@@ -1,1 +1,10 @@
 @use '../helpers' as *;
+
+.news-card {
+  display: grid;
+  row-gap: rem(20);
+
+  @include laptop {
+    row-gap: rem(16);
+  }
+}
